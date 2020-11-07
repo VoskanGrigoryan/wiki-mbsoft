@@ -23,11 +23,7 @@ const CardSolucion = () => {
             </Typography>
          </CardContent>
          <CardActions>
-            <AppButton
-               size="small"
-               style={{ backgroundColor: "#ec524b" }}
-               onClick={handleClickOpen}
-            >
+            <AppButton size="small" onClick={handleClickOpen}>
                Visualizar
             </AppButton>
          </CardActions>

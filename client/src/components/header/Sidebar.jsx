@@ -17,7 +17,7 @@ const Sidebar = ({ menuSide, abrirSide }) => {
                   className="rounded text-center text-light"
                   style={{ backgroundColor: "#083D77" }}
                >
-                  Menu
+                  Inicio
                </h2>
                {/* <CancelIcon onClick={abrirSide} className="mouse" /> */}
             </Link>

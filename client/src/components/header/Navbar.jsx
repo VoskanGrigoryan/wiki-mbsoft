@@ -11,9 +11,11 @@ const useStyles = makeStyles((theme) => ({
    },
    menuButton: {
       marginRight: theme.spacing(2),
+      color: "#ffffff",
    },
    title: {
       flexGrow: 1,
+      color: "#ffffff",
    },
 }));
 
@@ -35,23 +37,22 @@ export default function ButtonAppBar() {
 
    return (
       <div className={classes.root}>
-         <AppBar position="fixed" style={{ height: "64px", backgroundColor: "#088E9C" }}>
+         <AppBar position="fixed">
             <Wizardo openLogin={openLogin} handleLogin={handleLogin} />
             <Sidebar menuSide={menuSide} abrirSide={abrirSide} />
             <Toolbar>
                <IconButton
                   edge="start"
                   className={classes.menuButton}
-                  color="inherit"
                   onClick={abrirSide}
                >
                   <MenuIcon />
                </IconButton>
-               <Typography variant="h6" className={classes.title}>
+               <Typography variant="h5" className={classes.title}>
                   MbSoft - Wiki
                </Typography>
                <div onClick={handleLogin} className="hvr-grow">
-                  Login
+                  <h5 className="text-light mb-0">Login</h5>
                </div>
             </Toolbar>
          </AppBar>

@@ -2,10 +2,9 @@ import React from "react";
 import logoMaterialUI from "../../../images/logos/logoMaterialUI.png";
 import AppInput from "../../../components/genericos/AppInput";
 import AppButton from "../../../components/genericos/AppButton";
-import Paper from "@material-ui/core/Paper";
+import { Paper, Checkbox, FormControlLabel, FormGroup } from "@material-ui/core";
 import CardSolucion from "../../../components/CardSolucion";
 import { Link } from "react-router-dom";
-import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 
 const Index = () => {
    return (
@@ -13,7 +12,7 @@ const Index = () => {
          <div className="row mx-0">
             <div className="col-12">
                <h4
-                  className="rounded text-center text-light px-2"
+                  className="rounded text-center text-light py-1"
                   style={{ backgroundColor: "#1976d2" }}
                >
                   Material-UI{" "}
@@ -25,99 +24,124 @@ const Index = () => {
                   />
                </h4>
             </div>
-            <div className="col-12 row mx-0">
+            <div className="col-12 row mx-0 mt-4">
                <div className="col-xl-3 col-lg-4 col-md-12">
                   <div>
-                     <h3>Buscador</h3>
+                     <h2>Buscador</h2>
                      <AppInput label="Nombre del tema" />
+                     <FormGroup row>
+                        <FormControlLabel
+                           control={<Checkbox name="checkedA" color="primary" />}
+                           label="recientes"
+                        />
+                        <FormControlLabel
+                           control={
+                              <Checkbox name="checkedA" style={{ color: "#05F71F" }} />
+                           }
+                           label="mayor puntaje"
+                           color="primary"
+                        />
+                        <FormControlLabel
+                           control={
+                              <Checkbox name="checkedA" style={{ color: "#F77A05" }} />
+                           }
+                           label="menor puntaje"
+                        />
+                     </FormGroup>
+                     <AppButton>Filtrar</AppButton>
                   </div>
                   <hr />
                   <div>
-                     <h3>Crear thread</h3>
-                     <Link to="crear-thread">
+                     <Link
+                        to="crear-thread"
+                        style={{ textDecoration: "none", color: "black" }}
+                     >
                         {" "}
-                        <AppButton>Crear</AppButton>
+                        <AppButton fullWidth>Crear thread</AppButton>
                      </Link>
                   </div>
                </div>
                <Paper className="col-xl-9 col-lg-8 col-md-12 mt-4 py-2" elevation={3}>
                   <div className="row">
-                     <div className="col-xl-4 col-lg-6 p-1">
+                     <div className="col-xl-4 col-lg-6 py-1">
                         <CardSolucion />
                      </div>{" "}
-                     <div className="col-xl-4 col-lg-6 p-1">
+                     <div className="col-xl-4 col-lg-6 py-1">
                         <CardSolucion />
                      </div>{" "}
-                     <div className="col-xl-4 col-lg-6 p-1">
+                     <div className="col-xl-4 col-lg-6 py-1">
                         <CardSolucion />
                      </div>{" "}
-                     <div className="col-xl-4 col-lg-6 p-1">
+                     <div className="col-xl-4 col-lg-6 py-1">
                         <CardSolucion />
                      </div>{" "}
-                     <div className="col-xl-4 col-lg-6 p-1">
+                     <div className="col-xl-4 col-lg-6 py-1">
                         <CardSolucion />
                      </div>{" "}
-                     <div className="col-xl-4 col-lg-6 p-1">
+                     <div className="col-xl-4 col-lg-6 py-1">
                         <CardSolucion />
                      </div>{" "}
-                     <div className="col-xl-4 col-lg-6 p-1">
+                     <div className="col-xl-4 col-lg-6 py-1">
                         <CardSolucion />
                      </div>{" "}
-                     <div className="col-xl-4 col-lg-6 p-1">
+                     <div className="col-xl-4 col-lg-6 py-1">
                         <CardSolucion />
                      </div>{" "}
-                     <div className="col-xl-4 col-lg-6 p-1">
+                     <div className="col-xl-4 col-lg-6 py-1">
                         <CardSolucion />
                      </div>{" "}
-                     <div className="col-xl-4 col-lg-6 p-1">
+                     <div className="col-xl-4 col-lg-6 py-1">
                         <CardSolucion />
                      </div>{" "}
-                     <div className="col-xl-4 col-lg-6 p-1">
+                     <div className="col-xl-4 col-lg-6 py-1">
                         <CardSolucion />
                      </div>{" "}
-                     <div className="col-xl-4 col-lg-6 p-1">
+                     <div className="col-xl-4 col-lg-6 py-1">
                         <CardSolucion />
                      </div>{" "}
-                     <div className="col-xl-4 col-lg-6 p-1">
+                     <div className="col-xl-4 col-lg-6 py-1">
                         <CardSolucion />
                      </div>{" "}
-                     <div className="col-xl-4 col-lg-6 p-1">
+                     <div className="col-xl-4 col-lg-6 py-1">
                         <CardSolucion />
                      </div>{" "}
-                     <div className="col-xl-4 col-lg-6 p-1">
+                     <div className="col-xl-4 col-lg-6 py-1">
                         <CardSolucion />
                      </div>{" "}
-                     <div className="col-xl-4 col-lg-6 p-1">
+                     <div className="col-xl-4 col-lg-6 py-1">
                         <CardSolucion />
                      </div>{" "}
-                     <div className="col-xl-4 col-lg-6 p-1">
+                     <div className="col-xl-4 col-lg-6 py-1">
                         <CardSolucion />
                      </div>{" "}
-                     <div className="col-xl-4 col-lg-6 p-1">
+                     <div className="col-xl-4 col-lg-6 py-1">
                         <CardSolucion />
                      </div>{" "}
-                     <div className="col-xl-4 col-lg-6 p-1">
+                     <div className="col-xl-4 col-lg-6 py-1">
                         <CardSolucion />
                      </div>{" "}
-                     <div className="col-xl-4 col-lg-6 p-1">
+                     <div className="col-xl-4 col-lg-6 py-1">
                         <CardSolucion />
                      </div>{" "}
-                     <div className="col-xl-4 col-lg-6 p-1">
+                     <div className="col-xl-4 col-lg-6 py-1">
                         <CardSolucion />
                      </div>{" "}
-                     <div className="col-xl-4 col-lg-6 p-1">
+                     <div className="col-xl-4 col-lg-6 py-1">
                         <CardSolucion />
                      </div>{" "}
-                     <div className="col-xl-4 col-lg-6 p-1">
+                     <div className="col-xl-4 col-lg-6 py-1">
                         <CardSolucion />
                      </div>{" "}
-                     <div className="col-xl-4 col-lg-6 p-1">
+                     <div className="col-xl-4 col-lg-6 py-1">
                         <CardSolucion />
                      </div>{" "}
-                     <div className="col-xl-4 col-lg-6 p-1">
+                     <div className="col-xl-4 col-lg-6 py-1">
                         <CardSolucion />
                      </div>{" "}
-                     <div className="col-xl-4 col-lg-6 p-1">
+                     <div className="col-xl-4 col-lg-6 py-1">
+                        <CardSolucion />
+                     </div>{" "}
+                     <div className="col-xl-4 col-lg-6 py-1">
                         <CardSolucion />
                      </div>{" "}
                   </div>
