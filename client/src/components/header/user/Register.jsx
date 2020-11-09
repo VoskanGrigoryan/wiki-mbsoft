@@ -85,10 +85,10 @@ const Register = ({ setActivePage, handleModal }) => {
                />
 
                <div className="text-right mt-3">
-                  <AppButton className="mx-1" onClick={añadirUsuario}>
+                  <AppButton className="mx-1 text-light" onClick={añadirUsuario}>
                      Registrar
                   </AppButton>
-                  <AppButton className="mx-1" onClick={handleModal}>
+                  <AppButton className="mx-1 text-light" onClick={handleModal}>
                      Cancelar
                   </AppButton>
                   <hr />

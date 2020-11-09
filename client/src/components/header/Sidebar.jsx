@@ -1,13 +1,36 @@
 import React from "react";
-import { Divider, Drawer, List } from "@material-ui/core";
-import CancelIcon from "@material-ui/icons/Cancel";
-
+import {
+   Divider,
+   Drawer,
+   List,
+   ListItem,
+   ListItemText,
+   Collapse,
+} from "@material-ui/core";
+import ExpandLess from "@material-ui/icons/ExpandLess";
+import ExpandMore from "@material-ui/icons/ExpandMore";
 import { Link } from "react-router-dom";
+import swal from "sweetalert";
 
 const Sidebar = ({ menuSide, abrirSide }) => {
+   const [anchorEl, setAnchorEl] = React.useState(null);
+
+   const handleClick = (event) => {
+      setAnchorEl(event.currentTarget);
+   };
+
+   const handleClose = () => {
+      setAnchorEl(null);
+   };
+
+   const [open, setOpen] = React.useState(false);
+
+   const erpOpen = () => {
+      setOpen(!open);
+   };
    return (
       <Drawer anchor="left" open={menuSide} onClose={abrirSide}>
-         <div className="m-2 mr-4 ml-2" style={{ minWidth: "200px" }}>
+         <div className="m-2 mr-4 ml-2" style={{ minWidth: "240px" }}>
             <Link
                to="/"
                style={{ textDecoration: "none", color: "black" }}
@@ -15,48 +38,122 @@ const Sidebar = ({ menuSide, abrirSide }) => {
             >
                <h2
                   className="rounded text-center text-light"
-                  style={{ backgroundColor: "#083D77" }}
+                  style={{ backgroundColor: "#132743" }}
                >
                   Inicio
                </h2>
-               {/* <CancelIcon onClick={abrirSide} className="mouse" /> */}
             </Link>
 
             <Divider />
-            <div className="ml-2 mt-2">
-               <Link
-                  to="/prime-faces"
-                  onClick={abrirSide}
-                  style={{ textDecoration: "none" }}
+
+            <Link
+               to="/prime-faces"
+               onClick={abrirSide}
+               style={{ textDecoration: "none" }}
+            >
+               <ListItem button>
+                  <ListItemText primary="Prime Faces" className="hvr-forward" />
+               </ListItem>
+            </Link>
+            <Link to="/react" onClick={abrirSide} style={{ textDecoration: "none" }}>
+               <ListItem button>
+                  <ListItemText primary="React Js" className="hvr-forward" />
+               </ListItem>
+            </Link>
+            <Link
+               to="/material-ui"
+               onClick={abrirSide}
+               style={{ textDecoration: "none" }}
+            >
+               <ListItem button>
+                  <ListItemText primary="Material-UI" className="hvr-forward" />
+               </ListItem>
+            </Link>
+            <Link to="java" onClick={abrirSide} style={{ textDecoration: "none" }}>
+               <ListItem button>
+                  <ListItemText primary="Java" className="hvr-forward" />
+               </ListItem>
+            </Link>
+
+            <Link to="/bootstrap" onClick={abrirSide} style={{ textDecoration: "none" }}>
+               <ListItem button>
+                  <ListItemText primary="Bootstrap" className="hvr-forward" />
+               </ListItem>
+            </Link>
+            <Link to="/intellij" onClick={abrirSide} style={{ textDecoration: "none" }}>
+               <ListItem button>
+                  <ListItemText primary="IntelliJ" className="hvr-forward" />
+               </ListItem>
+            </Link>
+            <List component="div" disablePadding></List>
+
+            <Divider />
+
+            <List component="nav">
+               <Link to="/erp" style={{ textDecoration: "none" }}>
+                  <ListItem button>
+                     <ListItemText primary="ERP" className="text-dark" />
+                  </ListItem>
+               </Link>
+               <ListItem button onClick={erpOpen}>
+                  <ListItemText primary="Documentacion" />
+                  {open ? <ExpandLess /> : <ExpandMore />}
+               </ListItem>
+               <Collapse in={open} timeout="10s" unmountOnExit>
+                  <List component="div" disablePadding>
+                     <Link
+                        to="/erp"
+                        onClick={abrirSide}
+                        style={{ textDecoration: "none" }}
+                     >
+                        {" "}
+                        <ListItem button className="ml-4">
+                           <ListItemText
+                              primary="Instalación del ambiente"
+                              className="hvr-forward"
+                           />
+                        </ListItem>
+                     </Link>
+                  </List>
+                  <List component="div" disablePadding>
+                     <Link
+                        to="/erp"
+                        onClick={abrirSide}
+                        style={{ textDecoration: "none" }}
+                     >
+                        <ListItem button className="ml-4">
+                           <ListItemText
+                              primary="Errores comunes"
+                              className="hvr-forward"
+                           />
+                        </ListItem>
+                     </Link>
+                  </List>
+                  <List component="div" disablePadding>
+                     <Link
+                        to="/erp"
+                        onClick={abrirSide}
+                        style={{ textDecoration: "none" }}
+                     >
+                        <ListItem button className="ml-4">
+                           <ListItemText primary="Guia general" className="hvr-forward" />
+                        </ListItem>
+                     </Link>
+                  </List>
+               </Collapse>
+            </List>
+            <Divider />
+
+            <List className="hvr-forward">
+               <ListItem
+                  button
+                  onClick={() => {
+                     swal("Alto ahí!", "Esta sección esta en desarrollo", "error");
+                  }}
                >
-                  <List className="hvr-forward">
-                     <h5>Prime Faces</h5>
-                  </List>
-               </Link>
-               <Link to="/react" onClick={abrirSide} style={{ textDecoration: "none" }}>
-                  <List className="hvr-forward">
-                     <h5>React</h5>
-                  </List>
-               </Link>
-               <Link
-                  to="/material-ui"
-                  onClick={abrirSide}
-                  style={{ textDecoration: "none" }}
-               >
-                  <List className="hvr-forward">
-                     <h5>Material-ui</h5>
-                  </List>
-               </Link>
-               <List className="hvr-forward">
-                  <h5>Java</h5>
-               </List>
-               <List className="hvr-forward">
-                  <h5>Bootstrap</h5>
-               </List>
-               <List className="hvr-forward">
-                  <h5>IntelliJ</h5>
-               </List>
-            </div>
+                  <ListItemText primary="Guia de usuario" className="hvr-forward" />
+               </ListItem>
+            </List>
          </div>
       </Drawer>
    );

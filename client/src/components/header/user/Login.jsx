@@ -62,10 +62,10 @@ const Register = ({ setActivePage, handleLogin }) => {
                />
 
                <div className="text-right mt-3">
-                  <AppButton className="mx-1" onClick={logearUsuario}>
+                  <AppButton className="mx-1 text-light" onClick={logearUsuario}>
                      Ingresar
                   </AppButton>
-                  <AppButton className="mx-1" onClick={handleLogin}>
+                  <AppButton className="mx-1 text-light" onClick={handleLogin}>
                      Cancelar
                   </AppButton>
                   <hr />

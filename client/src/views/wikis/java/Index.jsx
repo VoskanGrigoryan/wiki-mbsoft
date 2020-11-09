@@ -1,9 +1,9 @@
 import React from "react";
-import logoMaterialUI from "../../../images/logos/logoMaterialUI.png";
+import { Link } from "react-router-dom";
+import { Paper, FormControl, Select } from "@material-ui/core";
+import logoJava from "../../../images/logos/logoJava.png";
 import AppButton from "../../../components/genericos/AppButton";
 import CardSolucion from "../../../components/CardSolucion";
-import { FormControl, Paper, Select } from "@material-ui/core";
-import { Link } from "react-router-dom";
 
 const Index = () => {
    return (
@@ -12,12 +12,12 @@ const Index = () => {
             <div className="col-12">
                <h4
                   className="rounded text-center text-light"
-                  style={{ backgroundColor: "#1976d2" }}
+                  style={{ backgroundColor: "#5E0006" }}
                >
-                  Material-UI{" "}
+                  Java{" "}
                   <img
                      className="pb-1"
-                     src={logoMaterialUI}
+                     src={logoJava}
                      alt="logo"
                      style={{ height: "25px" }}
                   />
@@ -74,51 +74,6 @@ const Index = () => {
                </div>
                <Paper className="col-xl-9 col-lg-8 col-md-12 py-2 my-2" elevation={3}>
                   <div className="row">
-                     <div className="col-xl-4 col-lg-6 py-1">
-                        <CardSolucion />
-                     </div>{" "}
-                     <div className="col-xl-4 col-lg-6 py-1">
-                        <CardSolucion />
-                     </div>{" "}
-                     <div className="col-xl-4 col-lg-6 py-1">
-                        <CardSolucion />
-                     </div>{" "}
-                     <div className="col-xl-4 col-lg-6 py-1">
-                        <CardSolucion />
-                     </div>{" "}
-                     <div className="col-xl-4 col-lg-6 py-1">
-                        <CardSolucion />
-                     </div>{" "}
-                     <div className="col-xl-4 col-lg-6 py-1">
-                        <CardSolucion />
-                     </div>{" "}
-                     <div className="col-xl-4 col-lg-6 py-1">
-                        <CardSolucion />
-                     </div>{" "}
-                     <div className="col-xl-4 col-lg-6 py-1">
-                        <CardSolucion />
-                     </div>{" "}
-                     <div className="col-xl-4 col-lg-6 py-1">
-                        <CardSolucion />
-                     </div>{" "}
-                     <div className="col-xl-4 col-lg-6 py-1">
-                        <CardSolucion />
-                     </div>{" "}
-                     <div className="col-xl-4 col-lg-6 py-1">
-                        <CardSolucion />
-                     </div>{" "}
-                     <div className="col-xl-4 col-lg-6 py-1">
-                        <CardSolucion />
-                     </div>{" "}
-                     <div className="col-xl-4 col-lg-6 py-1">
-                        <CardSolucion />
-                     </div>{" "}
-                     <div className="col-xl-4 col-lg-6 py-1">
-                        <CardSolucion />
-                     </div>{" "}
-                     <div className="col-xl-4 col-lg-6 py-1">
-                        <CardSolucion />
-                     </div>{" "}
                      <div className="col-xl-4 col-lg-6 py-1">
                         <CardSolucion />
                      </div>{" "}
