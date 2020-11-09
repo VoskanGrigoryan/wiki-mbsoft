@@ -1,9 +1,4 @@
-.mouse {
-  cursor: pointer;
-}
-.mouse:hover {
-  color: #F72C25;
-}
+
 
 /* Forward */
 .hvr-forward {
@@ -27,6 +22,8 @@
   cursor: pointer;
 }
 
+
+
 /* Grow */
 .hvr-grow {
   display: inline-block;
@@ -49,23 +46,24 @@
   cursor: pointer;
 }
 
-/* Grow */
-.grow-22 {
+.mouse {
+  cursor: pointer;
+  color: black
+}
+.mouse:hover {
+  color: #F72C25;
   display: inline-block;
   vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
+  transform: scale(1.1);
 }
 
-.grow:hover,
-.grow:focus,
-.grow:active {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-  cursor: pointer;
+@font-face {
+  font-family: "Scary Halloween";
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/scary_halloween/Scary\ Halloween\ Font.ttf')
+}
+
+.erp-fuente {
+  font-family: "Scary Halloween"
 }

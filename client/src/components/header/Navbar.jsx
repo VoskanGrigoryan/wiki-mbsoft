@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { makeStyles, AppBar, Toolbar, Typography, IconButton } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import Wizardo from "../header/user/index";
-
+import logoWiki from "../../images/logos/logoWiki.png";
 import Sidebar from "./Sidebar";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
    root: {
@@ -48,11 +49,17 @@ export default function ButtonAppBar() {
                >
                   <MenuIcon />
                </IconButton>
-               <Typography variant="h5" className={classes.title}>
-                  MbSoft - Wiki
-               </Typography>
+               <div className={classes.title}>
+                  <Link to="/" style={{ textDecoration: "none" }}>
+                     <img
+                        src={logoWiki}
+                        alt="logo wiki"
+                        style={{ height: "60px", marginTop: "10px" }}
+                     />
+                  </Link>
+               </div>
                <div onClick={handleLogin} className="hvr-grow">
-                  <h5 className="text-light mb-0">Login</h5>
+                  <h5 className="text-light mb-0">Inicio sesion</h5>
                </div>
             </Toolbar>
          </AppBar>

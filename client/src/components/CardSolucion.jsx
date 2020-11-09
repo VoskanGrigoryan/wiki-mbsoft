@@ -1,8 +1,19 @@
-import { Card, CardActions, CardContent, Typography } from "@material-ui/core";
 import React from "react";
 import AppButton from "./genericos/AppButton";
-
+import {
+   Card,
+   CardActions,
+   CardContent,
+   Typography,
+   makeStyles,
+} from "@material-ui/core";
 import DialogThread from "./DialogThread";
+
+const useStyles = makeStyles((theme) => ({
+   ta: {
+      justifyContent: "center",
+   },
+}));
 
 const CardSolucion = () => {
    const [open, setOpen] = React.useState(false);
@@ -10,6 +21,8 @@ const CardSolucion = () => {
    const handleClickOpen = () => {
       setOpen(!open);
    };
+
+   const classes = useStyles();
 
    return (
       <Card>
@@ -22,8 +35,8 @@ const CardSolucion = () => {
                Lizards are a widespread group of squamate reptiles, with over 6,000
             </Typography>
          </CardContent>
-         <CardActions>
-            <AppButton size="small" onClick={handleClickOpen}>
+         <CardActions className={classes.ta}>
+            <AppButton size="small" className="text-light" onClick={handleClickOpen}>
                Visualizar
             </AppButton>
          </CardActions>
