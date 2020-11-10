@@ -1,15 +1,17 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import Paper from "@material-ui/core/Paper";
+import {
+   makeStyles,
+   Table,
+   TableBody,
+   TableCell,
+   TableContainer,
+   TableHead,
+   TableRow,
+   Paper,
+   Checkbox,
+} from "@material-ui/core";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
 import StarIcon from "@material-ui/icons/Star";
-import { Checkbox, FormControlLabel } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
@@ -76,8 +78,8 @@ export default function BasicTable() {
                      <TableCell align="left">{row.calories}</TableCell>
                      <TableCell align="right" className="p-0">
                         <Checkbox
-                           icon={<StarBorderIcon />}
-                           checkedIcon={<StarIcon style={{ color: "#FFDC20" }} />}
+                           icon={<StarIcon style={{ color: "#FFDC20" }} />}
+                           checkedIcon={<StarBorderIcon style={{ color: "#000000" }} />}
                         />
                      </TableCell>
                   </TableRow>

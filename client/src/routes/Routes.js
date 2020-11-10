@@ -13,6 +13,7 @@ import IntelliJ from "../views/wikis/intelliJ/Index";
 import Erp from "../views/wikis/erp/Index";
 import ScrollArriba from "../components/ScrollArriba"
 
+
 const Routes = () => {
    return (
       <Router>
@@ -28,6 +29,7 @@ const Routes = () => {
             <Route path="/bootstrap" exact component={Bootstrap} />
             <Route path="/intellij" exact component={IntelliJ} />
             <Route path="/erp" exact component={Erp} />
+            
          </Switch>
       </Router>
    );

@@ -27,7 +27,7 @@ const Index = () => {
                <div className="col-xl-3 col-lg-4 col-md-12 my-2 pl-0">
                   <Paper className="p-2" elevation={3}>
                      <div>
-                        <h2>Buscador</h2>
+                        <h3>Buscador</h3>
                         <div className="input-group mb-3">
                            <input
                               type="text"
@@ -72,52 +72,22 @@ const Index = () => {
                      </div>
                   </Paper>
                </div>
-               <Paper className="col-xl-9 col-lg-8 col-md-12 py-2 my-2" elevation={3}>
+               <div className="col-xl-9 col-lg-8 col-md-12 my-1 px-1">
                   <div className="row">
-                     <div className="col-xl-4 col-lg-6 py-1">
+                     <div className="col-xl-3 col-lg-6 py-1 px-2">
                         <CardSolucion />
                      </div>{" "}
-                     <div className="col-xl-4 col-lg-6 py-1">
+                     <div className="col-xl-3 col-lg-6 py-1 px-2">
                         <CardSolucion />
                      </div>{" "}
-                     <div className="col-xl-4 col-lg-6 py-1">
+                     <div className="col-xl-3 col-lg-6 py-1 px-2">
                         <CardSolucion />
                      </div>{" "}
-                     <div className="col-xl-4 col-lg-6 py-1">
-                        <CardSolucion />
-                     </div>{" "}
-                     <div className="col-xl-4 col-lg-6 py-1">
-                        <CardSolucion />
-                     </div>{" "}
-                     <div className="col-xl-4 col-lg-6 py-1">
-                        <CardSolucion />
-                     </div>{" "}
-                     <div className="col-xl-4 col-lg-6 py-1">
-                        <CardSolucion />
-                     </div>{" "}
-                     <div className="col-xl-4 col-lg-6 py-1">
-                        <CardSolucion />
-                     </div>{" "}
-                     <div className="col-xl-4 col-lg-6 py-1">
-                        <CardSolucion />
-                     </div>{" "}
-                     <div className="col-xl-4 col-lg-6 py-1">
-                        <CardSolucion />
-                     </div>{" "}
-                     <div className="col-xl-4 col-lg-6 py-1">
-                        <CardSolucion />
-                     </div>{" "}
-                     <div className="col-xl-4 col-lg-6 py-1">
-                        <CardSolucion />
-                     </div>{" "}
-                     <div className="col-xl-4 col-lg-6 py-1">
-                        <CardSolucion />
-                     </div>{" "}
-                     <div className="col-xl-4 col-lg-6 py-1">
+                     <div className="col-xl-3 col-lg-6 py-1 px-2">
                         <CardSolucion />
                      </div>{" "}
                   </div>
-               </Paper>
+               </div>
             </div>
          </div>
       </div>

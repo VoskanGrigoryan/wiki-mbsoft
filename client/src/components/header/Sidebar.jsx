@@ -28,6 +28,14 @@ const Sidebar = ({ menuSide, abrirSide }) => {
    const erpOpen = () => {
       setOpen(!open);
    };
+
+   const alerta = () => {
+      swal(
+         "Ojo al piojo!",
+         "Esta sección no forma parte de la demo y aun no esta hecha",
+         "warning"
+      );
+   };
    return (
       <Drawer anchor="left" open={menuSide} onClose={abrirSide}>
          <div className="m-2 mr-4 ml-2" style={{ minWidth: "240px" }}>
@@ -36,12 +44,12 @@ const Sidebar = ({ menuSide, abrirSide }) => {
                style={{ textDecoration: "none", color: "black" }}
                onClick={abrirSide}
             >
-               <h2
-                  className="rounded text-center text-light"
+               <h4
+                  className="rounded text-center text-light pb-1"
                   style={{ backgroundColor: "#132743" }}
                >
                   Inicio
-               </h2>
+               </h4>
             </Link>
 
             <Divider />
@@ -90,8 +98,8 @@ const Sidebar = ({ menuSide, abrirSide }) => {
             <Divider />
 
             <List component="nav">
-               <Link to="/erp" style={{ textDecoration: "none" }}>
-                  <ListItem button>
+               <Link to="/erp" style={{ textDecoration: "none" }} onClick={alerta}>
+                  <ListItem button onClick={abrirSide}>
                      <ListItemText primary="ERP" className="text-dark" />
                   </ListItem>
                </Link>
@@ -107,7 +115,7 @@ const Sidebar = ({ menuSide, abrirSide }) => {
                         style={{ textDecoration: "none" }}
                      >
                         {" "}
-                        <ListItem button className="ml-4">
+                        <ListItem button className="ml-4" onClick={alerta}>
                            <ListItemText
                               primary="Instalación del ambiente"
                               className="hvr-forward"
@@ -121,7 +129,7 @@ const Sidebar = ({ menuSide, abrirSide }) => {
                         onClick={abrirSide}
                         style={{ textDecoration: "none" }}
                      >
-                        <ListItem button className="ml-4">
+                        <ListItem button className="ml-4" onClick={alerta}>
                            <ListItemText
                               primary="Errores comunes"
                               className="hvr-forward"
@@ -135,7 +143,7 @@ const Sidebar = ({ menuSide, abrirSide }) => {
                         onClick={abrirSide}
                         style={{ textDecoration: "none" }}
                      >
-                        <ListItem button className="ml-4">
+                        <ListItem button className="ml-4" onClick={alerta}>
                            <ListItemText primary="Guia general" className="hvr-forward" />
                         </ListItem>
                      </Link>

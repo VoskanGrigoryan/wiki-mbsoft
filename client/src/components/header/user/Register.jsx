@@ -25,10 +25,13 @@ const Register = ({ setActivePage, handleModal }) => {
       if (
          nuevoUsuario.usuario.length < 3 ||
          nuevoUsuario.correo.length < 3 ||
-         nuevoUsuario.contrasena.length < 3 ||
-         nuevoUsuario.contrasena !== nuevoUsuario.reContrasena
+         nuevoUsuario.contrasena.length < 3
       ) {
-         swal("Valores Incorrectos!", "Porfavor revisa los inputs", "error");
+         swal("Valores Incorrectos!", "Los valores ingresados no son validos", "error");
+         return;
+      }
+      if (nuevoUsuario.contrasena !== nuevoUsuario.reContrasena) {
+         swal("Valores Incorrectos!", "Las contraseñas no coinciden", "error");
          return;
       }
       // axios.post("http://localhost:3001/api/insert", { usuario: nuevoUsuario });

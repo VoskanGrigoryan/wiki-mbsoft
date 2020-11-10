@@ -27,7 +27,7 @@ const Index = () => {
                <div className="col-xl-3 col-lg-4 col-md-12 my-2 pl-0">
                   <Paper className="p-2" elevation={3}>
                      <div>
-                        <h2>Buscador</h2>
+                        <h3>Buscador</h3>
                         <div className="input-group mb-3">
                            <input
                               type="text"

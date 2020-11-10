@@ -9,11 +9,11 @@ import {
    Typography,
    Slide,
    ListItem,
+   Fab,
 } from "@material-ui/core";
-
+import EditIcon from "@material-ui/icons/Edit";
 import CloseIcon from "@material-ui/icons/Close";
 
-import AppButton from "../components/genericos/AppButton";
 import DashCalidad from "../images/gen/DashCalidad.png";
 import DashCalidad2 from "../images/gen/DashCalidad2.png";
 import { Link } from "react-router-dom";
@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
    title: {
       marginLeft: theme.spacing(2),
       flex: 1,
+      color: "white",
    },
 }));
 
@@ -50,13 +51,20 @@ export default function FullScreenDialog({ open, handleClickOpen }) {
                <Typography variant="h6" className={classes.title}>
                   Material-UI
                </Typography>
-               <AppButton color="secondary" onClick={handleClickOpen} className="mr-2">
-                  Finalizar
-               </AppButton>
+
+               <Fab
+                  size="medium"
+                  color="secondary"
+                  onClick={handleClickOpen}
+                  className="bg-secondary mr-2"
+               >
+                  <CloseIcon />
+               </Fab>
+
                <Link to="/crear-thread" style={{ textDecoration: "none" }}>
-                  <AppButton color="secondary" onClick={handleClickOpen}>
-                     Modificar
-                  </AppButton>
+                  <Fab size="medium" color="secondary" onClick={handleClickOpen}>
+                     <EditIcon />
+                  </Fab>
                </Link>
             </Toolbar>
          </AppBar>
